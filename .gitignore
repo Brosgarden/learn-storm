@@ -1,0 +1,8 @@
+-output*.txt
+logs/
+out/
+.vagrant/
+.idea
+.gradle
+*.iml
+build/

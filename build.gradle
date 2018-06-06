@@ -1,0 +1,25 @@
+plugins {
+    id "com.diffplug.gradle.spotless" version "3.5.2"
+}
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://clojars.org/repo/' }
+}
+
+dependencies {
+    compile 'mysql:mysql-connector-java:5.1.44'
+    compile 'org.apache.storm:storm-core:1.2.1'
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+    testCompile 'junit:junit:4.12'
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
+}
